@@ -1,0 +1,22 @@
+ 0: invokestatic  #7                  // Method java/lang/Math.random:()D
+ 3: ldc2_w        #13                 // double 2.0d
+ 6: dmul
+ 7: d2i
+ 8: istore_1
+ 9: iload_1
+10: lookupswitch  { // 2
+               1: 36
+               2: 42
+         default: 48
+    }
+36: ldc           #15                 // String one
+38: astore_2
+39: goto          51
+42: ldc           #17                 // String two
+44: astore_2
+45: goto          51
+48: ldc           #19                 // String other
+50: astore_2
+51: getstatic     #21                 // Field java/lang/System.out:Ljava/io/PrintStream;
+54: aload_2
+55: invokevirtual #27                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
